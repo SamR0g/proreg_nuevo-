@@ -20,6 +20,7 @@ import {
   ArrowRightCircle,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
+import { localBusinessJsonLd } from '@/config/site';
 import { blogPosts } from '@/data/blogPosts';
 
 const differentiators = [
@@ -83,30 +84,12 @@ const trustBullets = [
   { icon: Tag, text: 'Precios competitivos' },
 ];
 
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Proreg',
-  description:
-    'Especialistas en refrigeración doméstica e industrial, aires acondicionados, ventilación y paneles solares en Guadalajara y Zapopan.',
-  telephone: '+523326409224',
-  email: 'contacto@proreg.com.mx',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Guadalajara',
-    addressRegion: 'Jalisco',
-    addressCountry: 'MX',
-  },
-  openingHours: 'Mo-Sa 09:00-19:00',
-  areaServed: ['Guadalajara', 'Zapopan', 'Estado de México'],
-};
-
 export default function Home() {
   return (
     <>
       <SEO
         title="Proreg | Ingeniería en Refrigeración, Ventilación y Paneles Solares en Guadalajara"
-        description="Especialistas en refrigeración doméstica e industrial, aires acondicionados, ventilación y paneles solares en Guadalajara y Zapopan. Venta, mantenimiento, reparación e instalación."
+        description="Refrigeración doméstica e industrial, aires acondicionados, ventilación y paneles solares en Guadalajara y Zapopan. Venta, mantenimiento, reparación e instalación."
         keywords="refrigeración Guadalajara, refrigeración industrial Zapopan, aires acondicionados, paneles solares, mantenimiento refrigeración, cámaras frigoríficas"
         canonical="/"
         jsonLd={localBusinessJsonLd}
@@ -116,7 +99,7 @@ export default function Home() {
       <section className="relative bg-primary-800 overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, #f5a623 1px, transparent 1px), radial-gradient(circle at 80% 30%, #f5a623 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle at 20% 50%, #FF6B35 1px, transparent 1px), radial-gradient(circle at 80% 30%, #FF6B35 1px, transparent 1px)',
             backgroundSize: '40px 40px',
           }} />
         </div>
@@ -151,20 +134,20 @@ export default function Home() {
             <div className="relative w-full max-w-md">
               <div className="aspect-square bg-primary-700/50 rounded-3xl border border-white/10 flex items-center justify-center p-12 backdrop-blur-sm">
                 <svg viewBox="0 0 200 200" className="w-full h-full" fill="none">
-                  <rect x="40" y="60" width="120" height="80" stroke="#f5a623" strokeWidth="2" rx="4" />
-                  <rect x="55" y="75" width="90" height="50" stroke="#4a6385" strokeWidth="1.5" rx="2" />
-                  <rect x="70" y="90" width="60" height="30" stroke="#4a6385" strokeWidth="1" rx="2" />
-                  <line x1="100" y1="40" x2="100" y2="60" stroke="#f5a623" strokeWidth="2" />
-                  <circle cx="100" cy="35" r="6" stroke="#f5a623" strokeWidth="2" />
-                  <line x1="40" y1="100" x2="20" y2="100" stroke="#4a6385" strokeWidth="1.5" />
-                  <line x1="160" y1="100" x2="180" y2="100" stroke="#4a6385" strokeWidth="1.5" />
-                  <rect x="15" y="95" width="8" height="10" stroke="#f5a623" strokeWidth="1.5" rx="1" />
-                  <rect x="177" y="95" width="8" height="10" stroke="#f5a623" strokeWidth="1.5" rx="1" />
-                  <line x1="100" y1="140" x2="100" y2="165" stroke="#4a6385" strokeWidth="1.5" />
-                  <rect x="90" y="165" width="20" height="12" stroke="#f5a623" strokeWidth="2" rx="2" />
-                  <circle cx="100" cy="100" r="3" fill="#f5a623" />
-                  <line x1="70" y1="50" x2="70" y2="60" stroke="#4a6385" strokeWidth="1" />
-                  <line x1="130" y1="50" x2="130" y2="60" stroke="#4a6385" strokeWidth="1" />
+                  <rect x="40" y="60" width="120" height="80" stroke="#FF6B35" strokeWidth="2" rx="4" />
+                  <rect x="55" y="75" width="90" height="50" stroke="#3A9FDB" strokeWidth="1.5" rx="2" />
+                  <rect x="70" y="90" width="60" height="30" stroke="#3A9FDB" strokeWidth="1" rx="2" />
+                  <line x1="100" y1="40" x2="100" y2="60" stroke="#FF6B35" strokeWidth="2" />
+                  <circle cx="100" cy="35" r="6" stroke="#FF6B35" strokeWidth="2" />
+                  <line x1="40" y1="100" x2="20" y2="100" stroke="#3A9FDB" strokeWidth="1.5" />
+                  <line x1="160" y1="100" x2="180" y2="100" stroke="#3A9FDB" strokeWidth="1.5" />
+                  <rect x="15" y="95" width="8" height="10" stroke="#FF6B35" strokeWidth="1.5" rx="1" />
+                  <rect x="177" y="95" width="8" height="10" stroke="#FF6B35" strokeWidth="1.5" rx="1" />
+                  <line x1="100" y1="140" x2="100" y2="165" stroke="#3A9FDB" strokeWidth="1.5" />
+                  <rect x="90" y="165" width="20" height="12" stroke="#FF6B35" strokeWidth="2" rx="2" />
+                  <circle cx="100" cy="100" r="3" fill="#FF6B35" />
+                  <line x1="70" y1="50" x2="70" y2="60" stroke="#3A9FDB" strokeWidth="1" />
+                  <line x1="130" y1="50" x2="130" y2="60" stroke="#3A9FDB" strokeWidth="1" />
                 </svg>
               </div>
             </div>
@@ -319,7 +302,7 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-accent text-primary-900 rounded-2xl p-6 shadow-xl hidden md:block">
+              <div className="absolute -bottom-6 -left-6 bg-accent text-white rounded-2xl p-6 shadow-xl hidden md:block">
                 <p className="text-4xl font-bold">10+</p>
                 <p className="text-sm font-medium">Años de experiencia</p>
               </div>
@@ -337,13 +320,13 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               ¿Problemas con tu sistema de refrigeración o climatización?
             </h2>
-            <p className="text-primary-900/80 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               Nuestro equipo está listo para ayudarte con diagnóstico, reparación y mantenimiento profesional.
             </p>
-            <Link to="/contacto" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-800 text-white font-semibold rounded-lg hover:bg-primary-900 transition-all duration-300 shadow-lg">
+            <Link to="/contacto" className="inline-flex items-center gap-2 px-8 py-4 bg-primary-700 text-white font-semibold rounded-lg hover:bg-primary-800 transition-all duration-300 shadow-lg">
               Solicitar Servicio
               <ArrowRightCircle className="w-5 h-5" />
             </Link>

@@ -103,7 +103,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-6">
           <p className="text-center text-sm text-white/50">
-            © 2025 Proreg - Todos los derechos reservados
+            © 2026 Proreg - Todos los derechos reservados
           </p>
         </div>
       </div>

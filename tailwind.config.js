@@ -5,18 +5,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1a2332',
-          50: '#f4f6f9',
-          100: '#e8edf3',
-          200: '#c8d3e0',
-          300: '#9fb1c6',
-          400: '#6b85a3',
-          500: '#4a6385',
-          600: '#3a5170',
-          700: '#2d3f57',
-          800: '#1a2332',
-          900: '#111827',
-          950: '#0b0f1a',
+          DEFAULT: '#7CC8FF',
+          50: '#f0f8ff',
+          100: '#e0f0ff',
+          200: '#b8e0ff',
+          300: '#91d1ff',
+          400: '#7CC8FF',
+          500: '#5BB5F0',
+          600: '#3A9FDB',
+          700: '#2A8AC0',
+          800: '#1a6A9E',
+          900: '#0d4a7a',
+          950: '#06304f',
         },
         accent: {
           DEFAULT: '#f5a623',
@@ -39,7 +39,7 @@ export default {
           dark: '#1da851',
         },
         warning: {
-          DEFAULT: '#f5a623',
+          DEFAULT: '#FF6B35',
         },
         error: {
           DEFAULT: '#e5484d',

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import SEO from '@/components/SEO';
+import { localBusinessJsonLd } from '@/config/site';
 import { openWhatsApp } from '@/utils/whatsapp';
 
 const contactInfo = [
@@ -19,24 +20,6 @@ const serviceTypes = [
   'Paneles Solares',
   'Otro/Consulta',
 ];
-
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Proreg',
-  description:
-    'Especialistas en refrigeración doméstica e industrial, aires acondicionados, ventilación y paneles solares en Guadalajara y Zapopan.',
-  telephone: '+523326409224',
-  email: 'contacto@proreg.com.mx',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Guadalajara',
-    addressRegion: 'Jalisco',
-    addressCountry: 'MX',
-  },
-  openingHours: 'Mo-Sa 09:00-19:00',
-  areaServed: ['Guadalajara', 'Zapopan', 'Estado de México'],
-};
 
 export default function Contact() {
   const [form, setForm] = useState({

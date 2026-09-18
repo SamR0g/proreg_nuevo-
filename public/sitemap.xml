@@ -8,7 +8,7 @@
   <url>
     <loc>https://www.proreg.com.mx/servicios</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.proreg.com.mx/productos/domesticos</loc>
@@ -28,7 +28,7 @@
   <url>
     <loc>https://www.proreg.com.mx/blog</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.proreg.com.mx/blog/calculo-ach-nave-industrial</loc>
@@ -43,11 +43,11 @@
   <url>
     <loc>https://www.proreg.com.mx/nosotros</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.proreg.com.mx/contacto</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
