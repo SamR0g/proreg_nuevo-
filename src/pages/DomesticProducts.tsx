@@ -96,16 +96,16 @@ export default function DomesticProducts() {
         <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             {/* Servicios: Reparación, Instalación y Mantenimiento */}
-            <div className="mb-6 flex items-center gap-4">
-              <span aria-hidden="true" className="hidden sm:block h-0.5 w-12 bg-accent" />
-              <ul className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6">
+            <div className="mb-8 flex items-center gap-5">
+              <span aria-hidden="true" className="hidden sm:block h-1 w-16 shrink-0 bg-accent" />
+              <ul className="flex flex-wrap items-center gap-x-6 gap-y-4 xl:flex-nowrap">
                 {heroServices.map(({ icon: Icon, label }, i) => (
-                  <li key={label} className="flex items-center gap-x-5 sm:gap-x-6">
+                  <li key={label} className="flex items-center gap-x-6">
                     {i > 0 && (
-                      <span aria-hidden="true" className="hidden sm:block h-5 w-px bg-white/30" />
+                      <span aria-hidden="true" className="hidden sm:block h-8 w-px bg-white/30" />
                     )}
-                    <span className="flex items-center gap-2 text-accent font-bold uppercase tracking-[0.15em] text-xs sm:text-sm md:text-base">
-                      <Icon className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
+                    <span className="flex items-center gap-2.5 whitespace-nowrap text-accent font-bold uppercase tracking-[0.1em] text-xl sm:text-2xl xl:text-3xl">
+                      <Icon className="w-6 h-6 xl:w-8 xl:h-8" aria-hidden="true" />
                       {label}
                     </span>
                   </li>
