@@ -96,13 +96,11 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="relative bg-primary-800 overflow-hidden min-h-[600px] flex items-center">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, #FF6B35 1px, transparent 1px), radial-gradient(circle at 80% 30%, #FF6B35 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }} />
-        </div>
+      <section
+        className="relative bg-primary-800 overflow-hidden min-h-[600px] flex items-center bg-cover bg-center"
+        style={{ backgroundImage: "url('./img/Home.webp')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10 py-20 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -123,33 +121,6 @@ export default function Home() {
               <Link to="/servicios" className="btn-secondary">
                 Ver Servicios
               </Link>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden lg:flex justify-center"
-          >
-            <div className="relative w-full max-w-md">
-              <div className="aspect-square bg-primary-700/50 rounded-3xl border border-white/10 flex items-center justify-center p-12 backdrop-blur-sm">
-                <svg viewBox="0 0 200 200" className="w-full h-full" fill="none">
-                  <rect x="40" y="60" width="120" height="80" stroke="#FF6B35" strokeWidth="2" rx="4" />
-                  <rect x="55" y="75" width="90" height="50" stroke="#3A9FDB" strokeWidth="1.5" rx="2" />
-                  <rect x="70" y="90" width="60" height="30" stroke="#3A9FDB" strokeWidth="1" rx="2" />
-                  <line x1="100" y1="40" x2="100" y2="60" stroke="#FF6B35" strokeWidth="2" />
-                  <circle cx="100" cy="35" r="6" stroke="#FF6B35" strokeWidth="2" />
-                  <line x1="40" y1="100" x2="20" y2="100" stroke="#3A9FDB" strokeWidth="1.5" />
-                  <line x1="160" y1="100" x2="180" y2="100" stroke="#3A9FDB" strokeWidth="1.5" />
-                  <rect x="15" y="95" width="8" height="10" stroke="#FF6B35" strokeWidth="1.5" rx="1" />
-                  <rect x="177" y="95" width="8" height="10" stroke="#FF6B35" strokeWidth="1.5" rx="1" />
-                  <line x1="100" y1="140" x2="100" y2="165" stroke="#3A9FDB" strokeWidth="1.5" />
-                  <rect x="90" y="165" width="20" height="12" stroke="#FF6B35" strokeWidth="2" rx="2" />
-                  <circle cx="100" cy="100" r="3" fill="#FF6B35" />
-                  <line x1="70" y1="50" x2="70" y2="60" stroke="#3A9FDB" strokeWidth="1" />
-                  <line x1="130" y1="50" x2="130" y2="60" stroke="#3A9FDB" strokeWidth="1" />
-                </svg>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -296,7 +267,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/8961342/pexels-photo-8961342.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="./img/mant.webp"
                   alt="Técnico certificado de Proreg realizando mantenimiento de refrigeración industrial"
                   loading="lazy"
                   className="w-full h-full object-cover"

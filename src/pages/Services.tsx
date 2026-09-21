@@ -71,8 +71,12 @@ export default function Services() {
       />
 
       {/* Page Header */}
-      <section className="bg-primary-800 py-20">
-        <div className="container-proreg">
+      <section
+        className="relative bg-primary-800 py-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('./img/services.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
+        <div className="container-proreg relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,12 +125,12 @@ export default function Services() {
                     <img
                       src={
                         i === 0
-                          ? 'https://images.pexels.com/photos/4226856/pexels-photo-4226856.jpeg?auto=compress&cs=tinysrgb&w=800'
+                          ? './img/ref1.png'
                           : i === 1
-                          ? 'https://images.pexels.com/photos/8961342/pexels-photo-8961342.jpeg?auto=compress&cs=tinysrgb&w=800'
+                          ? './img/serv3.png'
                           : i === 2
-                          ? 'https://images.pexels.com/photos/8961067/pexels-photo-8961067.jpeg?auto=compress&cs=tinysrgb&w=800'
-                          : 'https://images.pexels.com/photos/3946043/pexels-photo-3946043.jpeg?auto=compress&cs=tinysrgb&w=800'
+                          ? './img/reparacion.webp'
+                          : './img/air.webp'
                       }
                       alt={`${service.title} de equipos de refrigeración en Guadalajara`}
                       loading="lazy"

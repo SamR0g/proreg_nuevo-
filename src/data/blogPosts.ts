@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Ventilación Industrial',
     date: '2025-01-15',
     readTime: '8 min',
-    image: 'https://images.pexels.com/photos/2249528/pexels-photo-2249528.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/img/ACH.png',
     content: [
       'El cálculo de cambios de aire por hora (ACH, por sus siglas en inglés: Air Changes per Hour) es un parámetro fundamental en el diseño de sistemas de ventilación industrial. Determina cuántas veces el volumen total de aire de un espacio es renovado en una hora.',
       'Para calcular el ACH necesario, primero debemos conocer el volumen del espacio (largo × ancho × alto). Luego, según el tipo de actividad que se realice en la nave, se establece un valor recomendado de renovaciones por hora. Por ejemplo, un almacén convencional puede requerir entre 3 y 6 ACH, mientras que una zona con alta carga de calor o gases puede necesitar de 10 a 20 ACH.',
@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Mantenimiento',
     date: '2025-02-10',
     readTime: '10 min',
-    image: 'https://images.pexels.com/photos/3946043/pexels-photo-3946043.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/img/compresores.png',
     content: [
       'Los compresores scroll y semiherméticos son el corazón de los sistemas de refrigeración comercial e industrial. Su correcto mantenimiento preventivo es esencial para evitar fallas costosas y asegurar la eficiencia energética del sistema.',
       'El mantenimiento preventivo debe incluir la revisión periódica de los niveles de aceite refrigerante, ya que un nivel bajo puede causar daños severos en los componentes internos del compresor. Se recomienda verificar el aceite cada 3 a 6 meses según el uso.',

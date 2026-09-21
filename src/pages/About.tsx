@@ -19,8 +19,12 @@ export default function About() {
         canonical="/nosotros"
       />
 
-      <section className="bg-primary-800 py-20">
-        <div className="container-proreg">
+      <section
+        className="relative bg-primary-800 py-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('./img/about.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
+        <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="heading-1 text-white mb-4">Sobre Nosotros</h1>
             <p className="text-lg text-white/70 max-w-2xl">Conoce la historia y el equipo detrás de Proreg.</p>
@@ -45,7 +49,7 @@ export default function About() {
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.pexels.com/photos/8961342/pexels-photo-8961342.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="./img/refrigeracion.png"
                   alt="Equipo de técnicos certificados de Proreg trabajando en refrigeración industrial"
                   loading="lazy"
                   className="w-full h-full object-cover"

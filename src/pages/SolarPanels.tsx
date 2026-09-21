@@ -31,9 +31,9 @@ const services = [
 ];
 
 const projects = [
-  { title: 'Residencial', desc: 'Instalación de sistema fotovoltaico para hogar con 12 paneles.', img: 'https://images.pexels.com/photos/371900/371900-720x720.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { title: 'Comercial', desc: 'Sistema solar para oficina con 30 paneles y monitoreo remoto.', img: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { title: 'Industrial', desc: 'Instalación de 200 paneles para nave industrial con alto consumo.', img: 'https://images.pexels.com/photos/9875414/pexels-photo-9875414.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { title: 'Residencial', desc: 'Instalación de sistema fotovoltaico para hogar con 12 paneles.', img: '/img/serv1.png' },
+  { title: 'Comercial', desc: 'Sistema solar para oficina con 30 paneles y monitoreo remoto.', img: '/img/serv2.png' },
+  { title: 'Industrial', desc: 'Instalación de 200 paneles para nave industrial con alto consumo.', img: '/img/pro1.png' },
 ];
 
 export default function SolarPanels() {
@@ -46,13 +46,11 @@ export default function SolarPanels() {
         canonical="/productos/paneles-solares"
       />
 
-      <section className="relative bg-primary-800 py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 30% 50%, #f5a623 1px, transparent 1px)',
-            backgroundSize: '30px 30px',
-          }} />
-        </div>
+      <section
+        className="relative bg-primary-800 py-20 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('/img/solar.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-6">

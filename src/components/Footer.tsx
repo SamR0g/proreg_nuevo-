@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Wrench, Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
 
 const quickLinks = [
   { to: '/', label: 'Inicio' },
@@ -16,6 +16,9 @@ const serviceLinks = [
   { to: '/servicios', label: 'Reparación Especializada' },
   { to: '/servicios', label: 'Instalación Profesional' },
 ];
+
+const FACEBOOK_URL = 'https://www.facebook.com/share/1DpZzqwnXT/?mibextid=wwXIfr';
+const INSTAGRAM_URL = 'https://www.instagram.com/proreg.mx?stkn=ODR2aTBsazgxMmF3&utm_source=qr';
 
 export default function Footer() {
   return (
@@ -35,9 +38,8 @@ export default function Footer() {
               Soluciones integrales en refrigeración, climatización y energía solar.
             </p>
             <div className="flex gap-3 mt-5">
-              <SocialIcon icon={<Facebook className="w-4 h-4" />} />
-              <SocialIcon icon={<Instagram className="w-4 h-4" />} />
-              <SocialIcon icon={<Linkedin className="w-4 h-4" />} />
+              <SocialIcon href={FACEBOOK_URL} label="Facebook" icon={<Facebook className="w-4 h-4" />} />
+              <SocialIcon href={INSTAGRAM_URL} label="Instagram" icon={<Instagram className="w-4 h-4" />} />
             </div>
           </div>
 
@@ -78,7 +80,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5 text-sm">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                <span>33 2640 9224</span>
+                <a href="tel:+523326409224" className="hover:text-accent transition-colors">
+                  33 2640 9224
+                </a>
               </li>
               <li className="flex items-start gap-2.5 text-sm">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
@@ -111,12 +115,22 @@ export default function Footer() {
   );
 }
 
-function SocialIcon({ icon }: { icon: React.ReactNode }) {
+function SocialIcon({
+  icon,
+  href,
+  label,
+}: {
+  icon: React.ReactNode;
+  href: string;
+  label: string;
+}) {
   return (
     <a
-      href="#"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent hover:text-primary-900 flex items-center justify-center transition-all duration-300"
-      aria-label="Red social"
+      aria-label={label}
     >
       {icon}
     </a>

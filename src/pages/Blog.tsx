@@ -14,8 +14,12 @@ export default function Blog() {
         canonical="/blog"
       />
 
-      <section className="bg-primary-800 py-20">
-        <div className="container-proreg">
+      <section
+        className="relative bg-primary-800 py-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('./img/blog.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
+        <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="heading-1 text-white mb-4">Guías Técnicas</h1>
             <p className="text-lg text-white/70 max-w-2xl">Recursos y guías informativas para resolver problemas comunes de refrigeración, climatización y mantenimiento.</p>

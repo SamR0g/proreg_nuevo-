@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Fan, AirVent, Snowflake, Wind, CheckCircle, ArrowRight } from 'lucide-react';
+import { Fan, AirVent, Snowflake, Wind, CheckCircle, ArrowRight, ShoppingBag } from 'lucide-react';
 import SEO from '@/components/SEO';
 
 const systems = [
@@ -24,6 +24,45 @@ const diagrams = [
   { title: 'Esquema de ventilación cruzada', desc: 'Configuración de ventilación cruzada para renovación de aire en nave industrial.' },
 ];
 
+const catalog = [
+  {
+    name: 'Aire Acondicionado Portátil Mirage X-One 1 Ton',
+    desc: 'Aire acondicionado portátil Mirage X-One, capacidad de 1 tonelada, fácil instalación sin obra.',
+    img: '/img/aire-mirage-x-one-1ton.webp',
+    link: 'https://www.mercadolibre.com.mx/aire-acondicionado-portatil-mirage-x-one-1-ton/p/MLM22254631?pdp_filters=item_id%3AMLM1975266209&matt_tool=17030900&ua=URevoA-Sph3bpdcbVKHWXaWMLjV0A_mdwsS0IKwv1x-EqbE#origin=share&sid=share&wid=MLM1975266209',
+  },
+  {
+    name: 'Minisplit Portátil Friocal Frikko 1 Ton',
+    desc: 'Minisplit portátil Friocal Frikko FKPT1U131H, 1 tonelada, color blanco.',
+    img: '/img/minisplit-friocal-frikko-1ton.webp',
+    link: 'https://www.mercadolibre.com.mx/minisplit-portatil-friocal-frikko-fkpt1u131h-1ton-36204550-blanco/p/MLM74702299?pdp_filters=item_id%3AMLM5609675086&matt_tool=17030900&ua=hXIciL_LZtsGbjVBpWXMyORm3z1bB6LW6_gtKN_hoH_KALk#origin=share&sid=share&wid=MLM5609675086',
+  },
+  {
+    name: 'Hisense Smart Eye Minisplit Inverter 1 Ton',
+    desc: 'Minisplit Hisense Smart Eye Inverter ARU122VQW, 1 tonelada (12,000 BTU), frío/calor, gas R32, WiFi y autolimpieza.',
+    img: '/img/hisense-smart-eye-1ton.webp',
+    link: 'https://www.mercadolibre.com.mx/hisense-aire-acondicionado-smart-eye-minisplit-inverter-aru122vqw-1-ton-12000-btus-friocalor-220v-gas-r32-seer-225-ultra-delgado-conexion-wifi-modo-inteligente-ai-autolimpieza-temporizador/p/MLM50743742?pdp_filters=item_id%3AMLM3720905172&matt_tool=17030900&ua=j3rTql_G0ldqc6PTsXw-9BJTyVhlWhDHpnQCx3cF5VI988E#origin=share&sid=share&wid=MLM3720905172',
+  },
+  {
+    name: 'Aire Acondicionado Portátil Inverter LG 1 Ton',
+    desc: 'Aire acondicionado portátil Inverter LG LP1225IVSM, 1 tonelada, WiFi, color blanco.',
+    img: '/img/aire-portatil-lg-1ton.webp',
+    link: 'https://www.mercadolibre.com.mx/aire-acondicionado-portatil-inverter-wifi-1ton-lp1225ivsm-lg-blanco/p/MLM50320084?pdp_filters=item_id%3AMLM2824219927&matt_tool=17030900&ua=MjhXJUnCsM7x03vOPtBcg05hqMfJJvuXjBJHNguGejigMwM#origin=share&sid=share&wid=MLM2824219927',
+  },
+  {
+    name: 'Minisplit Inverter Mirage X5 2 Toneladas',
+    desc: 'Minisplit Inverter Mirage X5, 220V, 2 toneladas (23,000 BTU), con WiFi.',
+    img: '/img/minisplit-mirage-x5-2ton.webp',
+    link: 'https://www.mercadolibre.com.mx/minisplit-inverter-x5-220v-mirage-2-toneladas-23000-btu-wifi/up/MLMU912604321?pdp_filters=item_id%3AMLM2794810765&matt_tool=17030900&ua=biu_sGLXzvYlZZB7SVlueacwhwyWNlDEjFeBRuMPxxa8Qa4#origin=share&sid=share&wid=MLM2794810765',
+  },
+  {
+    name: 'Minisplit Mirage X5 L 1 Tonelada 110V',
+    desc: 'Minisplit Mirage X5 L, 110V, 1 tonelada (12,000 BTU).',
+    img: '/img/minisplit-mirage-x5l-1ton.webp',
+    link: 'https://www.mercadolibre.com.mx/aire-minisplit-110v-mirage-1-toneladas-12-000-bt-x5-l/up/MLMU893338607?pdp_filters=item_id%3AMLM1490323445&matt_tool=17030900&ua=tQXXnoPUn1LgsKzKM6FuUzmS0U9Ik6K5T0HY-bXnpgx7Fro#origin=share&sid=share&wid=MLM1490323445',
+  },
+];
+
 export default function IndustrialProducts() {
   return (
     <>
@@ -34,8 +73,12 @@ export default function IndustrialProducts() {
         canonical="/productos/refrigeracion-industrial"
       />
 
-      <section className="bg-primary-800 py-20">
-        <div className="container-proreg">
+      <section
+        className="relative bg-primary-800 py-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('/img/industrial.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary-900/70" />
+        <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="heading-1 text-white mb-4">Refrigeración Industrial y Climatización</h1>
             <p className="text-lg text-white/70 max-w-2xl">Soluciones de refrigeración para industria, comercio y procesos especiales.</p>
@@ -77,7 +120,7 @@ export default function IndustrialProducts() {
             </div>
           </div>
 
-          <div>
+          <div className="mb-20">
             <h2 className="heading-2 text-primary-800 mb-4 text-center">Diagramas Técnicos</h2>
             <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Ilustraciones de referencia de nuestros sistemas y configuraciones.</p>
             <div className="grid sm:grid-cols-2 gap-8">
@@ -133,6 +176,33 @@ export default function IndustrialProducts() {
                   <div className="p-5">
                     <h3 className="font-bold text-primary-800 mb-1.5">{item.title}</h3>
                     <p className="text-sm text-gray-600">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="heading-2 text-primary-800 mb-4 text-center">Catálogo de Productos</h2>
+            <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Aires acondicionados y minisplits disponibles para venta.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {catalog.map((item, i) => (
+                <motion.div key={item.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: i * 0.05 }} className="bg-white rounded-xl border border-gray-100 overflow-hidden card-hover flex flex-col">
+                  <div className="aspect-square overflow-hidden bg-white flex items-center justify-center p-4">
+                    <img src={item.img} alt={item.name} loading="lazy" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="p-4 flex flex-col flex-1 border-t border-gray-100">
+                    <h3 className="font-semibold text-primary-800 text-sm mb-1.5">{item.name}</h3>
+                    <p className="text-xs text-gray-500 mb-3 flex-1">{item.desc}</p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-1.5 text-sm bg-primary-50 text-primary-800 hover:bg-accent hover:text-primary-900 font-medium py-2 rounded-lg transition-all duration-300"
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                      Comprar
+                    </a>
                   </div>
                 </motion.div>
               ))}
