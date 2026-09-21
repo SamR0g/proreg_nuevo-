@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
-import { Refrigerator, WashingMachine, ShoppingCart, Wrench, Settings, Fan, ArrowRight, CheckCircle, ShoppingBag } from 'lucide-react';
+import { Refrigerator, WashingMachine, ShoppingCart, Wrench, Settings, Fan, ShoppingBag } from 'lucide-react';
 import SEO from '@/components/SEO';
+
+const heroServices = [
+  { icon: Wrench, label: 'Reparación' },
+  { icon: Fan, label: 'Instalación' },
+  { icon: Settings, label: 'Mantenimiento' },
+];
 
 const fridgeTypes = [
   { name: 'Refrigeradores de una puerta', desc: 'Clásicos y eficientes, ideales para espacios reducidos y hogares pequeños.', img: '/img/refrigerador1.png' },
@@ -81,14 +87,33 @@ export default function DomesticProducts() {
         canonical="/productos/domesticos"
       />
 
+      {/* Hero */}
       <section
-        className="relative bg-primary-800 py-20 bg-cover bg-center"
+        className="relative bg-primary-800 py-20 md:py-24 bg-cover bg-center"
         style={{ backgroundImage: "url('/img/domestic.png')" }}
       >
         <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="heading-1 text-white mb-4">Refrigeradores y Lavadoras Domésticas</h1>
+            {/* Servicios: Reparación, Instalación y Mantenimiento */}
+            <div className="mb-6 flex items-center gap-4">
+              <span aria-hidden="true" className="hidden sm:block h-0.5 w-12 bg-accent" />
+              <ul className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6">
+                {heroServices.map(({ icon: Icon, label }, i) => (
+                  <li key={label} className="flex items-center gap-x-5 sm:gap-x-6">
+                    {i > 0 && (
+                      <span aria-hidden="true" className="hidden sm:block h-5 w-px bg-white/30" />
+                    )}
+                    <span className="flex items-center gap-2 text-accent font-bold uppercase tracking-[0.15em] text-xs sm:text-sm md:text-base">
+                      <Icon className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
+                      {label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h1 className="heading-1 text-white mb-4">Refrigeradores y Lavadoras Domésticas y Comerciales</h1>
             <p className="text-lg text-white/70 max-w-2xl">Domésticos y comerciales de todas capacidades y características.</p>
           </motion.div>
         </div>
