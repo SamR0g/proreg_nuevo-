@@ -85,10 +85,6 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-sm">
-                <Mail className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                <span>contacto@proreg.com.mx</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-sm">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                 <span>Guadalajara y Zapopan, Jalisco</span>
               </li>

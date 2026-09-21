@@ -26,16 +26,19 @@ import { blogPosts } from '@/data/blogPosts';
 const differentiators = [
   {
     icon: Calculator,
+    img: './img/calculo_ach.png',
     title: 'Cálculo de ACH',
     text: 'Respaldamos cada proyecto con cálculo técnico de cambios de aire por hora.',
   },
   {
     icon: Ruler,
+    img: './img/diseno-ergonomia.png',
     title: 'Diseño y Ergonomía',
     text: 'Ingeniería pensada para el flujo real de tu planta u hogar.',
   },
   {
     icon: ShieldCheck,
+    img: './img/mantenimiento.png',
     title: 'Mantenimiento Preventivo',
     text: 'Pólizas de mantenimiento para extender la vida útil de tus equipos.',
   },
@@ -137,13 +140,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-gray-50 card-hover"
+                className="text-center rounded-2xl bg-gray-50 overflow-hidden card-hover"
               >
-                <div className="w-16 h-16 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                  <item.icon className="w-8 h-8 text-accent" />
+                <div className="aspect-[16/10] overflow-hidden bg-gray-200">
+                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-800 mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.text}</p>
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                    <item.icon className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary-800 mb-3">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.text}</p>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -127,8 +127,6 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-primary-800 hover:text-accent transition-colors"
                 >
-                  <MapPin className="w-4 h-4" />
-                  Cómo llegar
                 </a>
               </div>
             </motion.div>
