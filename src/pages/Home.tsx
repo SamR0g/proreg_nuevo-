@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Refrigeración Industrial y Ventilación en Guadalajara | Proreg"
+        title="Proreg | ingeniería en  Refrigeración,Cámaras Frigoríficas,ventilación industrial en Guadalajara"
         description="Ingeniería en refrigeración industrial y doméstica, cámaras frigoríficas, aire acondicionado, ventilación y paneles solares en Guadalajara y Zapopan."
         canonical="/"
         jsonLd={localBusinessJsonLd}
