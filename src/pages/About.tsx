@@ -13,15 +13,14 @@ export default function About() {
   return (
     <>
       <SEO
-        title="Sobre Proreg | Más de 10 años en Refrigeración e Ingeniería Industrial"
-        description="Conoce a Proreg: más de 10 años de experiencia en refrigeración, climatización y energía solar. Técnicos certificados, servicio personalizado y de calidad en Guadalajara y Zapopan."
-        keywords="sobre Proreg, empresa refrigeración Guadalajara, técnicos certificados refrigeración, distribuidores HVAC México"
+        title="Sobre Nosotros | Proreg, Refrigeración en Guadalajara"
+        description="Más de 10 años en refrigeración, climatización y energía solar. Técnicos certificados y servicio de calidad en Guadalajara y Zapopan."
         canonical="/nosotros"
       />
 
       <section
         className="relative bg-primary-800 py-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('./img/about.png')" }}
+        style={{ backgroundImage: "url('/img/about.png')" }}
       >
         <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10">
@@ -49,7 +48,7 @@ export default function About() {
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="./img/refrigeracion.png"
+                  src="/img/refrigeracion.png"
                   alt="Equipo de técnicos certificados de Proreg trabajando en refrigeración industrial"
                   loading="lazy"
                   className="w-full h-full object-cover"

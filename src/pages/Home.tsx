@@ -10,12 +10,10 @@ import {
   AirVent,
   Snowflake,
   Refrigerator,
-  WashingMachine,
   Sun,
   Zap,
   Award,
   Clock,
-  ThumbsUp,
   Tag,
   ArrowRightCircle,
 } from 'lucide-react';
@@ -26,19 +24,19 @@ import { blogPosts } from '@/data/blogPosts';
 const differentiators = [
   {
     icon: Calculator,
-    img: './img/calculo_ach.png',
+    img: '/img/calculo_ach.png',
     title: 'Cálculo de ACH',
     text: 'Respaldamos cada proyecto con cálculo técnico de cambios de aire por hora.',
   },
   {
     icon: Ruler,
-    img: './img/diseno-ergonomia.png',
+    img: '/img/diseno-ergonomia.png',
     title: 'Diseño y Ergonomía',
     text: 'Ingeniería pensada para el flujo real de tu planta u hogar.',
   },
   {
     icon: ShieldCheck,
-    img: './img/mantenimiento.png',
+    img: '/img/mantenimiento.png',
     title: 'Mantenimiento Preventivo',
     text: 'Pólizas de mantenimiento para extender la vida útil de tus equipos.',
   },
@@ -77,7 +75,7 @@ const techGrid = [
   { icon: Wrench, name: 'Ventilador Condensador', desc: 'Disipación térmica optimizada.' },
   { icon: Snowflake, name: 'Evaporadora Cassette', desc: 'Climatización discreta de techos.' },
   { icon: Zap, name: 'Chillers', desc: 'Enfriamiento de agua para grandes espacios.' },
-  { icon: Sun, name: 'Paneles Solares', desc: 'Energía limpia y ahorro garantizado.' },
+  { icon: Sun, name: 'Paneles Solares', desc: 'Con tu recibo de CFE te mostramos cuánto podrías ahorrar.' },
 ];
 
 const trustBullets = [
@@ -91,9 +89,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Proreg | Ingeniería en Refrigeración, Ventilación y Paneles Solares en Guadalajara"
-        description="Refrigeración doméstica e industrial, aires acondicionados, ventilación y paneles solares en Guadalajara y Zapopan. Venta, mantenimiento, reparación e instalación."
-        keywords="refrigeración Guadalajara, refrigeración industrial Zapopan, aires acondicionados, paneles solares, mantenimiento refrigeración, cámaras frigoríficas"
+        title="Refrigeración Industrial y Ventilación en Guadalajara | Proreg"
+        description="Ingeniería en refrigeración industrial y doméstica, cámaras frigoríficas, aire acondicionado, ventilación y paneles solares en Guadalajara y Zapopan."
         canonical="/"
         jsonLd={localBusinessJsonLd}
       />
@@ -101,7 +98,7 @@ export default function Home() {
       {/* Hero */}
       <section
         className="relative bg-primary-800 overflow-hidden min-h-[600px] flex items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('./img/Home.webp')" }}
+        style={{ backgroundImage: "url('/img/Home.webp')" }}
       >
         <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10 py-20 grid lg:grid-cols-2 gap-12 items-center">
@@ -275,7 +272,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="./img/mant.webp"
+                  src="/img/mant.webp"
                   alt="Técnico certificado de Proreg realizando mantenimiento de refrigeración industrial"
                   loading="lazy"
                   className="w-full h-full object-cover"

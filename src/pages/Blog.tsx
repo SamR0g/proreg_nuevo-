@@ -8,15 +8,14 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="Guías Técnicas de Refrigeración y Climatización | Blog Proreg"
+        title="Guías Técnicas de Refrigeración y Climatización | Proreg"
         description="Recursos y guías informativas para resolver problemas comunes de refrigeración, climatización y mantenimiento en Guadalajara y Zapopan."
-        keywords="guías refrigeración, blog refrigeración, mantenimiento climatización, cálculo ACH, compresores scroll"
         canonical="/blog"
       />
 
       <section
         className="relative bg-primary-800 py-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('./img/blog.png')" }}
+        style={{ backgroundImage: "url('/img/blog.png')" }}
       >
         <div className="absolute inset-0 bg-primary-900/70" />
         <div className="container-proreg relative z-10">
@@ -54,7 +53,14 @@ export default function Blog() {
                       </span>
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
-                        {new Date(post.date).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
+                        <time dateTime={post.date}>
+                          {new Date(post.date).toLocaleDateString('es-MX', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                            timeZone: 'UTC',
+                          })}
+                        </time>
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
